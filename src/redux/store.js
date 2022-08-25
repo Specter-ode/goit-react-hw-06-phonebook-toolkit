@@ -18,12 +18,12 @@ const rootPersistConfig = {
   blacklist: ['filter'],
 };
 
-const rootReducer = combineReducers({
+const contactsReducer = combineReducers({
   items: itemsReducer,
   filter: filterReducer,
 });
 
-const persistedReducer = persistReducer(rootPersistConfig, rootReducer);
+const persistedReducer = persistReducer(rootPersistConfig, contactsReducer);
 
 export const store = configureStore({
   reducer: {
